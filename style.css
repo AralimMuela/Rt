@@ -1,0 +1,240 @@
+/* ---------- Tipografía y base ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f6f6f6;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #b85c38;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #b85c38;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ---------- ARTÍCULO ---------- */
+.article {
+  background: #fff;
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.article h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.article h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.6rem;
+  color: #b85c38;
+  border-left: 4px solid #b85c38;
+  padding-left: 10px;
+  margin-top: 40px;
+}
+
+.article p {
+  font-size: 17px;
+  text-align: justify;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.article figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.article figure img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* ---------- CAJAS DESTACADAS ---------- */
+.highlight {
+  background-color: #fff7f2;
+  border-left: 4px solid #b85c38;
+  padding: 20px 25px;
+  border-radius: 10px;
+  margin: 30px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ---------- BOTONES ---------- */
+.button-link {
+  background-color: #b85c38;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 30px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.button-link:hover {
+  background-color: #8a3c1e;
+  transform: translateY(-2px);
+}
+
+/* ---------- COMENTARIOS ---------- */
+.comentarios {
+  max-width: 850px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.comentarios h2 {
+  color: #222;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 10px;
+}
+
+.comentarios p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.comentarios form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comentarios input,
+.comentarios textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 15px;
+  width: 100%;
+}
+
+.comentarios button {
+  background-color: #b85c38;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.comentarios button:hover {
+  background-color: #8a3c1e;
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .article {
+    padding: 30px 25px;
+  }
+
+  .comentarios {
+    padding: 25px;
+  }
+}
+.quiz-btn {
+  background: #ffbc7d;
+  color: #5b3d00;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px 0;
+  font-size: 17px;
+  box-shadow: 0 4px 12px rgba(255, 188, 125, 0.5);
+  transition: all 0.3s ease;
+}
+
+.quiz-btn:hover {
+  background: #ff9f4d;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 159, 77, 0.6);
+}
+
