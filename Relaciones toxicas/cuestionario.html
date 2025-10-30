@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario: ¿Mi relación es tóxica?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* === ESTILO INTEGRADO AL SITIO === */
+    body {
+      background-color: #faf9ff;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #6C63FF;
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .question p {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .question label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+
+    .quiz-button {
+      display: block;
+      background: #6C63FF;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .quiz-button:hover {
+      background: #857DFF;
+      transform: translateY(-2px);
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.2em;
+      text-align: center;
+      font-weight: bold;
+      color: #444;
+      background: #f6f5ff;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .volver-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .volver-btn {
+      background: #ffbc7d;
+      color: #5a2a00;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .volver-btn:hover {
+      background: #ffa856;
+      transform: translateY(-2px) scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="logotntn.png" alt="logo">
+      </a>
+      <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="detectar.html" class="active">¿Cómo Detectar?</a>
+        <a href="como-salir.html">¿Cómo Salir?</a>
+        <a href="relaciones-saludables.html">Relaciones Saludables</a>
+        <a href="recursos.html">Recursos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>¿Mi relación es tóxica?</h1>
+
+    <form id="quizForm">
+      <div class="question">
+        <p>1. ¿Sientes que tu relación es un "ni contigo ni sin ti"?</p>
+        <label><input type="radio" name="q1" value="0"> Nunca</label>
+        <label><input type="radio" name="q1" value="1"> A veces</label>
+        <label><input type="radio" name="q1" value="2"> Casi siempre</label>
+        <label><input type="radio" name="q1" value="3"> Siempre</label>
+      </div>
+
+      <div class="question">
+        <p>2. ¿Tu pareja incentiva tus proyectos o los menosprecia?</p>
+        <label><input type="radio" name="q2" value="0"> Siempre me apoya</label>
+        <label><input type="radio" name="q2" value="1"> A veces me apoya</label>
+        <label><input type="radio" name="q2" value="2"> Casi nunca me apoya</label>
+        <label><input type="radio" name="q2" value="3"> Siempre los menosprecia</label>
+      </div>
+
+      <div class="question">
+        <p>3. ¿Tu pareja te critica todo y sientes que no haces nada bien?</p>
+        <label><input type="radio" name="q3" value="0"> Nunca</label>
+        <label><input type="radio" name="q3" value="1"> A veces</label>
+        <label><input type="radio" name="q3" value="2"> Casi siempre</label>
+        <label><input type="radio" name="q3" value="3"> Siempre</label>
+      </div>
+
+      <div class="question">
+        <p>4. ¿Desde que estás en esta relación te has alejado de tus amigos y familiares?</p>
+        <label><input type="radio" name="q4" value="0"> No</label>
+        <label><input type="radio" name="q4" value="1"> Un poco</label>
+        <label><input type="radio" name="q4" value="2"> Bastante</label>
+        <label><input type="radio" name="q4" value="3"> Completamente</label>
+      </div>
+
+      <div class="question">
+        <p>5. ¿Tus gustos y aficiones son objeto de burla por parte de tu pareja?</p>
+        <label><input type="radio" name="q5" value="0"> No, los respeta</label>
+        <label><input type="radio" name="q5" value="1"> A veces</label>
+        <label><input type="radio" name="q5" value="2"> Con frecuencia</label>
+        <label><input type="radio" name="q5" value="3"> Siempre</label>
+      </div>
+
+      <div class="question">
+        <p>6. ¿Sientes que utiliza chantaje emocional para conseguir lo que quiere?</p>
+        <label><input type="radio" name="q6" value="0"> Nunca</label>
+        <label><input type="radio" name="q6" value="1"> A veces</label>
+        <label><input type="radio" name="q6" value="2"> Casi siempre</label>
+        <label><input type="radio" name="q6" value="3"> Siempre</label>
+      </div>
+
+      <div class="question">
+        <p>7. ¿Te pide explicaciones de todo lo que haces o con quién estás?</p>
+        <label><input type="radio" name="q7" value="0"> Nunca</label>
+        <label><input type="radio" name="q7" value="1"> A veces</label>
+        <label><input type="radio" name="q7" value="2"> Con frecuencia</label>
+        <label><input type="radio" name="q7" value="3"> Siempre</label>
+      </div>
+
+      <div class="question">
+        <p>8. ¿Tu pareja toma decisiones que os afectan a los dos sin consultarte?</p>
+        <label><input type="radio" name="q8" value="0"> Nunca</label>
+        <label><input type="radio" name="q8" value="1"> A veces</label>
+        <label><input type="radio" name="q8" value="2"> Con frecuencia</label>
+        <label><input type="radio" name="q8" value="3"> Siempre</label>
+      </div>
+
+      <button type="button" class="quiz-button" onclick="calcularResultado()">Ver resultado</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="volver-container">
+      <a href="detectar.html" class="volver-btn">← Volver a Detectar</a>
+    </div>
+  </main>
+
+  <script>
+    function calcularResultado() {
+      let total = 0;
+      const form = document.getElementById("quizForm");
+      const respuestas = form.querySelectorAll("input[type=radio]:checked");
+
+      if (respuestas.length < 8) {
+        document.getElementById("result").textContent = "⚠️ Por favor responde todas las preguntas.";
+        return;
+      }
+
+      respuestas.forEach(r => total += parseInt(r.value));
+
+      let resultText = "";
+      if (total <= 4) {
+        resultText = "✅ Tu relación parece bastante sana.";
+      } else if (total <= 14) {
+        resultText = "⚠️ Hay señales preocupantes, reflexiona sobre tu relación.";
+      } else {
+        resultText = "🚨 Tu relación muestra muchas señales de toxicidad. Es importante hablarlo y buscar apoyo.";
+      }
+
+      document.getElementById("result").textContent = resultText;
+    }
+  </script>
+</body>
+</html>
